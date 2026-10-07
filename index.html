@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vinh — To Do</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="atmosphere" aria-hidden="true"></div>
+
+    <main class="page">
+      <header class="hero">
+        <p class="brand">Vinh</p>
+        <h1 class="headline">What needs doing</h1>
+        <p class="lede">
+          A quiet list for the week ahead — start with the trip, then add the rest.
+        </p>
+      </header>
+
+      <section class="list-section" aria-labelledby="list-heading">
+        <div class="list-toolbar">
+          <h2 id="list-heading" class="list-heading">To do</h2>
+          <p class="list-meta" id="list-meta" aria-live="polite"></p>
+        </div>
+
+        <form class="add-form" id="add-form" autocomplete="off">
+          <label class="sr-only" for="new-todo">Add a to-do</label>
+          <input
+            id="new-todo"
+            name="todo"
+            type="text"
+            placeholder="Add something…"
+            maxlength="200"
+            required
+          />
+          <button type="submit" class="add-btn">Add</button>
+        </form>
+
+        <ul class="todo-list" id="todo-list" aria-label="Your to-dos"></ul>
+
+        <p class="empty-state" id="empty-state" hidden>
+          Nothing left. Enjoy the quiet.
+        </p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
